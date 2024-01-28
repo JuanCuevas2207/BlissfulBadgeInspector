@@ -28,7 +28,7 @@ def generate_happy_avatar():
 
 def draw_happy_face():
     # Create a 512x512 image with a white background
-    img = Image.new("RGBA", (514, 512), (255, 255, 255, 255))
+    img = Image.new("RGBA", (512, 512), (255, 255, 255, 255))
     draw = ImageDraw.Draw(img)
 
     # Draw a circle for the face
@@ -41,7 +41,29 @@ def draw_happy_face():
     # Draw a smiling mouth
     draw.arc((150, 250, 362, 400), start=0, end=180, fill=(0, 0, 0, 255), width=5)
 
-    img.save("TestBadges/happy_face.png")
+    img.save("TestBadges/happy_face.bmp")
+
+def yellow():
+    # Create a drawing object
+    img = Image.new("RGBA", (512, 512), (255, 255, 255, 255))
+    draw = ImageDraw.Draw(img)
+
+    # Get image dimensions
+    width, height = img.size
+
+    # Set circle properties
+    circle_radius = min(width, height) 
+    circle_center = (width // 2, height // 2)
+    circle_color = ((0, 204, 204))  # Yellow color with full opacity
+
+    # Draw the yellow circle
+    draw.ellipse((circle_center[0] - circle_radius, circle_center[1] - circle_radius,
+                    circle_center[0] + circle_radius, circle_center[1] + circle_radius),
+                    fill=circle_color, outline=None)
+    
+    img.save("TestBadges/yellow.png")
 
 # Generate and save the happy avatar
 draw_happy_face()
+generate_happy_avatar()
+yellow()
