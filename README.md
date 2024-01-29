@@ -1,6 +1,14 @@
 # BlissfulBadgeInspector
 BlissfulBadgeInspector is an application that validates the loading of avatars before they are uploaded. Developed by Juan Cuevas!
 
+## Table of content
+**[Overview](#overview)**<br>
+**[Prerequisites](#prerequisites)**<br>
+**[Console run](#console-run)**<br>
+**[Change the test image](#change-the-test-image)**<br>
+**[Functions](#functions)**<br>
+**[Run an example](#run-an-example)**<br>
+
 ## Overview
 
 This project validates the loading of an avatar that must have the following features:
@@ -50,3 +58,31 @@ The most important files used are the following:
 * [Generator](generator.md): used to create random avatars that fulfill or not the requirements
 * [Inspector](inspector.md): **Main file** this contains the main requested function that is responsible for validating the badge
 > **_NOTE:_**  For more details of each file (functions), click on the file title .
+
+## Run an example
+
+Using Visual studio code (https://code.visualstudio.com/docs/python/python-tutorial), follow next steps:
+
+1. Run the python file using the button in the upper right of the interface (as shown below)
+
+   ![image](https://github.com/JuanCuevas2207/BlissfulBadgeInspector/assets/67801108/24747f3e-b2c2-4f9c-96bd-629cfde46aa4)
+
+2. This will open a terminal in where the menu will be displayed
+3. A test badge already exists in the folder, [we can change it whenever we want](#change-the-test-image), so we will run the first option for validate the badge changing the img_path for TestBadges/test_2.jpg (we can use the test_3.jpg, but the test_2.jpg have more details so we will used it for this example).
+
+   ![image](https://github.com/JuanCuevas2207/BlissfulBadgeInspector/assets/67801108/6412685a-9db7-43b6-8989-73f3f493cd56)
+
+4. As you can see, the validation is unsuccessful cause due to format not being png
+5. We have two options here
+   1. Run option two which will transform the badge we have in the ideal format (changing image format, file size, removing transaparent pixels inside the circle and changing to bright colors), this will save a new file in the "TestBadges" folder with the same name of the file + "_valid.png". Also, it will re-run the badge validation automatically with the new badge path.
+
+      ![image](https://github.com/JuanCuevas2207/BlissfulBadgeInspector/assets/67801108/503189ab-0ea5-4649-9fa3-e0d86b72ba66)
+      ![image](https://github.com/JuanCuevas2207/BlissfulBadgeInspector/assets/67801108/265b596a-a178-4305-94e3-26b4114af496)
+
+   3. Run option three and then option one, which will create a new random badge that meets the specifications.
+
+      ![image](https://github.com/JuanCuevas2207/BlissfulBadgeInspector/assets/67801108/2a4863d4-7ddd-480e-be13-2f611f6d80ba)
+      ![image](https://github.com/JuanCuevas2207/BlissfulBadgeInspector/assets/67801108/41ac8cc0-7af8-40f0-94a6-925536af34d7)
+
+      
+6. Enter option 4 to exit the menu, or you can try any other function if you wish to do so 
