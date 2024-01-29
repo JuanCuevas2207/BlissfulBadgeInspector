@@ -53,5 +53,3 @@ def generate_happy_avatar():
     
     img.save(new_badge_path)
     return new_badge_path
-
-generate_bad_avatar()
